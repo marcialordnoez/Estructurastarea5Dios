@@ -2,6 +2,7 @@
 #include "Evaluador.h"
 #include <iostream>       // std::cin, std::cout
 #include <vector>          // std::list
+
 using namespace std;
 
 int infinito = 9999;
@@ -14,28 +15,36 @@ int infinito = 9999;
 //Nota: se sugiere NO usar recursion
 int obtenerDistanciaAristaDirecta(int grafo[5][5], int inicio, int destino)
 {
-    return grafo[inicio][destino];// retornamos la arista del grafo
+
+    return grafo[inicio][destino]; // obtenemos el peso directo entre un nodo y otro
+
 }
 
 //Devuelve verdadero si existe al menos un camino para llegar desde el nodo inicio hasta el nodo destino dada una profundidad maxima de recorrido
 //Nota: se sugiere usar recursion
 bool existeCamino(int grafo[5][5], int inicio, int destino,int profundidad)
 {
-    if(profundidad<0)//cuando sea menor que cero se detiene
-        return false;
+    if(profundidad<0 && inicio<5) // se le da un limite ala profundidad
+        return false; // retorna false
 
-    for(int i=0; i<5;i++)//corremos el inicio
-    {
-    if(grafo[i][destino]==infinito)//viendo si la pocision del grafo es igual a sin camino
+    if(inicio==destino)  // que el inicio sea igual al destino
+    return true; // devolvemos true
+
+
+        for(int i=0; i<5; i++) // verificamos en las otras aristas
         {
-         if(existeCamino(grafo,i,destino,profundidad-1))//usamos recursividad para ver si hay camino
-            {
-                return true;
-            }
+            if(grafo[inicio][i]==infinito) // verificamos si existe el camino
+                {
+                    continue; // no le ponemos atencion
+                }
+
+
+            if(existeCamino(grafo,i,destino,profundidad-1)) // verificamos otro con la recursividad
+                return true; // si lo llega a encontrar que nos retorne true
+
         }
-    }
 
-
+    return false; // si no hay camino que nos de false
 }
 
 int main ()

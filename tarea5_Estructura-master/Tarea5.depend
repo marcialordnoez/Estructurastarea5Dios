@@ -94,14 +94,26 @@
 	<iostream>
 	<vector>
 
-1417292262 source:c:\users\marcial ordonez\desktop\marcial.ordoestructuras\estructuratarea5-master\evaluador.cpp
+1417940759 source:/root/Github/EstructuraTarea5/Evaluador.cpp
 	"Evaluador.h"
 
-1417292262 c:\users\marcial ordonez\desktop\marcial.ordoestructuras\estructuratarea5-master\evaluador.h
+1417369692 /root/Github/EstructuraTarea5/Evaluador.h
 	<iostream>
 	<set>
 
-1417628504 source:c:\users\marcial ordonez\desktop\marcial.ordoestructuras\estructuratarea5-master\main.cpp
+1418055861 source:/root/Github/EstructuraTarea5/main.cpp
+	"Evaluador.h"
+	<iostream>
+	<vector>
+
+1418057778 source:c:\users\marcial ordonez\desktop\tarea5_estructura-master\evaluador.cpp
+	"Evaluador.h"
+
+1418057778 c:\users\marcial ordonez\desktop\tarea5_estructura-master\evaluador.h
+	<iostream>
+	<set>
+
+1418057778 source:c:\users\marcial ordonez\desktop\tarea5_estructura-master\main.cpp
 	"Evaluador.h"
 	<iostream>
 	<vector>
